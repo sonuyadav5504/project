@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char c[100];
+    char x[100];
+    int i,key=3;
+    printf("Enter the plain text:");
+    scanf("%[^\n]",&c);
+    for(i=0;i<strlen(c);i++)
+    {
+        if(c[i]==' ')
+            x[i]=c[i];
+
+        else if((c[i]+(key))>'z')
+            x[i]=(c[i]+(key))-'z';
+       else
+            x[i]=c[i]+key;
+    }
+    printf("%s",x);
+}
